@@ -17,6 +17,22 @@ Las herramientas utilizadas para el deploy del proyecto son:
 * [Github](https://github.com/) - GitHub
 * [NodeJs](https://nodejs.org/es/) - NodeJS
 
+## Archivo docker-compose.yml 📌
+* Este archivo esta compuesto de varias etiquetas que nos ayudan a realizar tareas especificas al momento de la construccion de los contenedores dentro de las principales tenemos las siguientes.
+    -   image: nos indica el nombre de la imagen que sera la base del contenedor.
+    -   ports: aqui vamos a mapear los puertos a los que se van a relacionar, este esta definido por el siguiente formato xxxx:yyyy donde las x's es el puerto de nuestro servidor y las y's es el puerto de salida del contenedor.
+    -   services: aqui se indican y se desarrollan los contenedores que se van a tener.
+    -   volumes: indica la carpeta local y la carpeta que se quiere almacenar por parte del contenedor.
+    -   build: en esta seccion nos indica el dockerfile que queremos tener para realizar configuraciones mas especificas del contenedor.
+
+    Se tiene que resaltar que la identacion en el archivo docker-compose es importante para que no ocurra un error al momento de realizar el docker-compose up
+
+## COMANDOS PARA EJECUTAR DOCKER-COMPOSE 📌
+*   docker-compose up: permite levantar los contenedores que fueron previamente arrancados.
+*   docker-compose up --build: permite crear la configuracion inicial de los contenedores y los inicia.
+*   docker-compose stop && sudo docker-compose rm -f: permite detener los volumenes y contenedores que tengamos activos y los elimina para levantarlos de manera limpia.
+*   docker images: permite ver las imagenes que tenemos en el host.
+*   docker ps -a: permite listar los volumenes de los contenedores que estan activos.
 
 ## Versionado 📌
 
